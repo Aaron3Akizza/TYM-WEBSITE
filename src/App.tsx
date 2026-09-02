@@ -1,0 +1,40 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+// Pages
+import { Home } from './pages/Home';
+import { About } from './pages/About';
+import { Vision } from './pages/Vision';
+import { WhatWeDo } from './pages/WhatWeDo';
+import { Events } from './pages/Events';
+import { EventDetails } from './pages/EventDetails';
+import { Media } from './pages/Media';
+import { GetInvolved } from './pages/GetInvolved';
+import { Contact } from './pages/Contact';
+import { SignIn } from './pages/SignIn';
+import { SignUp } from './pages/SignUp';
+import { Profile } from './pages/Profile';
+import { NotFound } from './pages/NotFound';
+
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/vision" element={<Vision />} />
+        <Route path="/what-we-do" element={<WhatWeDo />} />
+        <Route path="/events" element={<Events />} />
+        <Route path="/events/:slug" element={<EventDetails />} />
+        <Route path="/media" element={<Media />} />
+        <Route path="/get-involved" element={<GetInvolved />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/sign-in" element={<SignIn />} />
+        <Route path="/sign-up" element={<SignUp />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </Router>
+  );
+}
+
+export default App;
